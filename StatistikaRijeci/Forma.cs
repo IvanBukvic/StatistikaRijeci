@@ -52,7 +52,7 @@ namespace StatistikaRijeci
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            CloseApplication();            
         }
 
         private void Calculate_Click(object sender, EventArgs e)
@@ -103,6 +103,19 @@ namespace StatistikaRijeci
                 }
             }
             
+        }       
+
+        public void CloseApplication()
+        {
+            string message = "Do you want to close this application?";
+            string title = "Close Application";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
         }
+       
     }
 }
