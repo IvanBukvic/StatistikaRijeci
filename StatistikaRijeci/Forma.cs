@@ -48,5 +48,10 @@ namespace StatistikaRijeci
                 UnosText.Text = reader.ReadToEnd();
             }
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
