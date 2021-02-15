@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace StatistikaRijeci
 {
-    public partial class Form1 : Form
+    public partial class Forma : Form
     {
-        public Form1()
+        public Forma()
         {
             InitializeComponent();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
         }
     }
 }

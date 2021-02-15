@@ -1,7 +1,7 @@
 ﻿
 namespace StatistikaRijeci
 {
-    partial class Form1
+    partial class Forma
     {
         /// <summary>
         /// Required designer variable.
@@ -67,19 +67,19 @@ namespace StatistikaRijeci
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.closeToolStripMenuItem.Text = "&Close";
             // 
             // saveOutputToolStripMenuItem
             // 
             this.saveOutputToolStripMenuItem.Name = "saveOutputToolStripMenuItem";
-            this.saveOutputToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveOutputToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.saveOutputToolStripMenuItem.Text = "&Save Output";
             // 
             // helpToolStripMenuItem
@@ -95,6 +95,7 @@ namespace StatistikaRijeci
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -133,7 +134,7 @@ namespace StatistikaRijeci
             this.textBox2.Size = new System.Drawing.Size(359, 372);
             this.textBox2.TabIndex = 9;
             // 
-            // Form1
+            // Forma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +144,7 @@ namespace StatistikaRijeci
             this.Controls.Add(this.file);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form1";
+            this.Name = "Forma";
             this.Text = "Statistika riječi";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
