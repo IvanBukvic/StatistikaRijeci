@@ -40,6 +40,7 @@ namespace StatistikaRijeci
             this.file = new System.Windows.Forms.Button();
             this.Calculate = new System.Windows.Forms.Button();
             this.IznosText = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,22 +89,23 @@ namespace StatistikaRijeci
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // UnosText
             // 
-            this.UnosText.Location = new System.Drawing.Point(12, 27);
+            this.UnosText.Location = new System.Drawing.Point(12, 58);
             this.UnosText.Multiline = true;
             this.UnosText.Name = "UnosText";
             this.UnosText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.UnosText.Size = new System.Drawing.Size(321, 354);
             this.UnosText.TabIndex = 6;
+            this.UnosText.Text = "Enter text here . . .";
             // 
             // file
             // 
-            this.file.Location = new System.Drawing.Point(12, 387);
+            this.file.Location = new System.Drawing.Point(12, 434);
             this.file.Name = "file";
             this.file.Size = new System.Drawing.Size(125, 41);
             this.file.TabIndex = 7;
@@ -113,28 +115,40 @@ namespace StatistikaRijeci
             // 
             // Calculate
             // 
-            this.Calculate.Location = new System.Drawing.Point(143, 387);
+            this.Calculate.Location = new System.Drawing.Point(192, 434);
             this.Calculate.Name = "Calculate";
             this.Calculate.Size = new System.Drawing.Size(141, 41);
             this.Calculate.TabIndex = 8;
             this.Calculate.Text = "Calculate";
             this.Calculate.UseVisualStyleBackColor = true;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
             // IznosText
             // 
-            this.IznosText.Location = new System.Drawing.Point(360, 27);
+            this.IznosText.Location = new System.Drawing.Point(429, 58);
             this.IznosText.Multiline = true;
             this.IznosText.Name = "IznosText";
             this.IznosText.ReadOnly = true;
             this.IznosText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.IznosText.Size = new System.Drawing.Size(359, 372);
+            this.IznosText.Size = new System.Drawing.Size(359, 354);
             this.IznosText.TabIndex = 9;
+            this.IznosText.Text = "Word count will appear here . . .";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Enter text or choose a file :";
             // 
             // Forma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 548);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.IznosText);
             this.Controls.Add(this.Calculate);
             this.Controls.Add(this.file);
@@ -142,7 +156,7 @@ namespace StatistikaRijeci
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Forma";
-            this.Text = "Statistika riječi";
+            this.Text = "Word Counter";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -162,6 +176,7 @@ namespace StatistikaRijeci
         private System.Windows.Forms.Button file;
         private System.Windows.Forms.Button Calculate;
         private System.Windows.Forms.TextBox IznosText;
+        private System.Windows.Forms.Label label1;
     }
 }
 
