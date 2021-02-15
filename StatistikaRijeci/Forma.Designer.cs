@@ -29,30 +29,31 @@ namespace StatistikaRijeci
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Forma));
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveOutputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UnosText = new System.Windows.Forms.TextBox();
             this.file = new System.Windows.Forms.Button();
             this.Calculate = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.menuStrip1.SuspendLayout();
+            this.IznosText = new System.Windows.Forms.TextBox();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(831, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(882, 24);
+            this.menuStrip.TabIndex = 5;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -67,19 +68,20 @@ namespace StatistikaRijeci
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeToolStripMenuItem.Text = "&Close";
             // 
             // saveOutputToolStripMenuItem
             // 
             this.saveOutputToolStripMenuItem.Name = "saveOutputToolStripMenuItem";
-            this.saveOutputToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.saveOutputToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveOutputToolStripMenuItem.Text = "&Save Output";
             // 
             // helpToolStripMenuItem
@@ -93,18 +95,18 @@ namespace StatistikaRijeci
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // textBox1
+            // UnosText
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 27);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(321, 354);
-            this.textBox1.TabIndex = 6;
+            this.UnosText.Location = new System.Drawing.Point(12, 27);
+            this.UnosText.Multiline = true;
+            this.UnosText.Name = "UnosText";
+            this.UnosText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.UnosText.Size = new System.Drawing.Size(321, 354);
+            this.UnosText.TabIndex = 6;
             // 
             // file
             // 
@@ -114,6 +116,7 @@ namespace StatistikaRijeci
             this.file.TabIndex = 7;
             this.file.Text = "Open File";
             this.file.UseVisualStyleBackColor = false;
+            this.file.Click += new System.EventHandler(this.file_Click);
             // 
             // Calculate
             // 
@@ -124,30 +127,31 @@ namespace StatistikaRijeci
             this.Calculate.Text = "Calculate";
             this.Calculate.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // IznosText
             // 
-            this.textBox2.Location = new System.Drawing.Point(360, 27);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(359, 372);
-            this.textBox2.TabIndex = 9;
+            this.IznosText.Location = new System.Drawing.Point(360, 27);
+            this.IznosText.Multiline = true;
+            this.IznosText.Name = "IznosText";
+            this.IznosText.ReadOnly = true;
+            this.IznosText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.IznosText.Size = new System.Drawing.Size(359, 372);
+            this.IznosText.TabIndex = 9;
             // 
             // Forma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 579);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(882, 548);
+            this.Controls.Add(this.IznosText);
             this.Controls.Add(this.Calculate);
             this.Controls.Add(this.file);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.UnosText);
+            this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Forma";
             this.Text = "Statistika riječi";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,17 +159,17 @@ namespace StatistikaRijeci
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveOutputToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UnosText;
         private System.Windows.Forms.Button file;
         private System.Windows.Forms.Button Calculate;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox IznosText;
     }
 }
 
